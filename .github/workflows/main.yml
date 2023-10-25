@@ -8,8 +8,8 @@ jobs:
   build:
     runs-on: [ubuntu-latest]
     steps:
-     - name: delete the folder first if its there
-     - run: sudo rm -rf express-prisma-docker-aws
+      - name: delete the folder first if its there
+        run: sudo rm -rf express-prisma-docker-aws
 
   deploy:
     needs: build
