@@ -1,0 +1,29 @@
+GET http://localhost:3000/api/product
+###
+
+GET http://localhost:3000/api/product/ed852002-14b8-4a5f-80ab-310058a4482a
+
+###
+
+
+PUT http://localhost:3000/api/product/ed852002-14b8-4a5f-80ab-310058a4482a
+
+Content-Type: application/json
+{
+    "name":"taales",
+    "price":1999980
+}
+
+###
+POST http://localhost:3000/api/product
+Content-Type: application/json
+{
+    "name":"tabfales",
+    "price":19990
+}
+
+
+
+###
+
+DELETE http://localhost:3000/api/product/12

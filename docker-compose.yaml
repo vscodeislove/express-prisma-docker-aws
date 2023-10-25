@@ -1,0 +1,25 @@
+version: "3.7"
+
+services:
+  postgres:
+    image: "postgres:latest"
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - postgresDB:/var/lib/postgresql/data
+
+  api:
+    build:
+      dockerfile: Dockerfile
+      context: .
+    volumes:
+      - /app/node_modules
+      - ./routes:/app/routes
+    ports:
+      - "3000:3000"
+      - "5555:5555"
+    environment:
+      - DATABASE_URL=postgresql://postgres:postgres@postgres:5432/newdb
+
+volumes:
+  postgresDB:
