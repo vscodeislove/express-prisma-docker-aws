@@ -8,6 +8,8 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      - name: delete the folder first if its there
+        run: sudo rm -rf clonecopy
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clonecopy
       - name: go to under the directory
