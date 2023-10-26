@@ -9,7 +9,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
 
 app.get("/", async (req, res, next) => {
-  res.send({ message: "Awesome it works 🐻 edit this is sis " });
+  res.send({ message: "Awesome it works 🐻 after cicd pipeline " });
 });
 
 app.use("/api", require("./routes/api.route"));
