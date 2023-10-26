@@ -16,6 +16,6 @@ jobs:
       - name: pwd
         run: ls
       - name: pull the github repo
-        run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git .
+        run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clone
       - name: go to under the directory
         run: docker-compose up -d
