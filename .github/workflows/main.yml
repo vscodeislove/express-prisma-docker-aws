@@ -13,10 +13,6 @@ jobs:
       - name: delete the folder first if its there
         run: sudo rm -rf gitclone
       - name: pwd 
-        run: pwd
-      - name: make clone copy
-        run: sudo mkdir gitclone && cd /gitclone
-      - name: pwd 
         run: pwd  
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clonecopy
