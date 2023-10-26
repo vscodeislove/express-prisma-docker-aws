@@ -15,6 +15,7 @@ services:
     volumes:
       - /app/node_modules
       - ./routes:/app/routes
+      - ./app.js:/app/app.js
     ports:
       - "3000:3000"
       - "5555:5555"
