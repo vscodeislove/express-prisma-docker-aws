@@ -21,7 +21,7 @@ jobs:
       - name: ls 
         run: ls
       - name: go to under the directory
-        run: cd ./clonecopy/
+        run: cd /home/ubuntu/actions-runner/_work/express-prisma-docker-aws/express-prisma-docker-aws/clonecopy
       - name: pwd 
         run: pwd
       - name: run the docker compose up
