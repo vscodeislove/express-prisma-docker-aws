@@ -14,6 +14,6 @@ jobs:
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clonecopy
       - name: go to under the directory
-        run: cd /clonecopy
+        run: cd ./clonecopy
       - name: pwd
         run: pwd
