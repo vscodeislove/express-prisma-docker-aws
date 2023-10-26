@@ -8,13 +8,23 @@ jobs:
   deploy:
     runs-on: self-hosted
     steps:
+      - name: pwd 
+        run: pwd
       - name: delete the folder first if its there
         run: sudo rm -rf gitclone
+      - name: pwd 
+        run: pwd
       - name: make clone copy
         run: sudo mkdir gitclone && cd /gitclone
+      - name: pwd 
+        run: pwd  
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clonecopy
+      - name: pwd 
+        run: pwd
       - name: go to under the directory
         run: cd /clonecopy
+      - name: pwd 
+        run: pwd
       - name: run the docker compose up
         run: docker-compose up -d
