@@ -21,7 +21,7 @@ jobs:
       - name: ls 
         run: ls
       - name: go to under the directory
-        run: cd ./clonecopy
+        run: cd ./clonecopy/
       - name: pwd 
         run: pwd
       - name: run the docker compose up
