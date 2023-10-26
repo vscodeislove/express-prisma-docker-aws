@@ -5,16 +5,11 @@ on:
     branches: [main]
 
 jobs: 
-  build:
-    runs-on: [ubuntu-latest]
+  deploy:
+    runs-on: self-hosted
     steps:
       - name: delete the folder first if its there
         run: sudo rm -rf express-prisma-docker-aws
-
-  deploy:
-    needs: build
-    runs-on: [ec2runner]
-    steps:
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git 
       - name: go to under the directory
