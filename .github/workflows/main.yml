@@ -5,19 +5,18 @@ on:
     branches: [main]
 
 jobs: 
-  build:
-    runs-on: [ubuntu-latest]
-    steps:
-      - name: delete the folder first if its there
-        run: sudo rm -rf express-prisma-docker-aws
-
   deploy:
-    needs: build
-    runs-on: [ec2runner]
+    runs-on: self-hosted
     steps:
+      - uses: actions/checkout@v3
+      - name: remove the docker container
+        run: docker-compose down
+      - name: delete the folder first if its there
+        run: rm -rf ./* 
+      - name: pwd
+        run: ls
       - name: pull the github repo
-        run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git 
+        run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clone
       - name: go to under the directory
-        run: cd express-prisma-docker-aws
-      - name: run the docker compose up
         run: docker-compose up -d
+        working-directory: ./clone
