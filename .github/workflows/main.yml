@@ -13,6 +13,6 @@ jobs:
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git 
       - name: go to under the directory
-        run: cd express-prisma-docker-aws
+        run: cd express-prisma-docker-aws/express-prisma-docker-aws/express-prisma-docker-aws
       - name: run the docker compose up
         run: docker-compose up -d
