@@ -9,21 +9,11 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
-      - name: pwd 
-        run: pwd
-      - name: ls
-        run: ls
       - name: delete the folder first if its there
-        run: sudo rm -rf ./clonecopy
-      - name: pwd 
-        run: pwd  
+        run: sudo rm -rf ./clonecopy 
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clonecopy
-      - name: ls 
-        run: ls
       - name: go to under the directory
-        run: cd /home/ubuntu/actions-runner/_work/express-prisma-docker-aws/express-prisma-docker-aws/clonecopy
-      - name: pwd 
+        run: cd /clonecopy
+      - name: pwd
         run: pwd
-      - name: run the docker compose up
-        run: docker-compose up -d
