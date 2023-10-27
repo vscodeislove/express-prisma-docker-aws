@@ -13,9 +13,7 @@ jobs:
         run: docker-compose down
         working-directory: ./clone
       - name: delete the folder first if its there
-        run: rm -rf ./* 
-      - name: pwd
-        run: ls
+        run: rm -rf ./*
       - name: pull the github repo
         run: git clone https://github.com/vscodeislove/express-prisma-docker-aws.git clone
       - name: go to under the directory
