@@ -9,7 +9,5 @@ jobs:
     runs-on: self-hosted
     steps:
       - uses: actions/checkout@v3
-      - name: remove the docker container
-        run: docker-compose down
-      - name: go to under the directory
-        run: docker-compose up -d
+      - name: build the docker image
+        run: docker build .
